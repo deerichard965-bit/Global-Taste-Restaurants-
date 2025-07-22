@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Global Taste</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fcefdc;
+      padding-top: 80px;
+      text-align: center;
+    }/* Navigation Bar */
+nav {
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffd;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.menu-section {
+  margin-bottom: 40px;
+}
+
+.menu-section img {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h4 {
+  margin-top: 10px;
+  color: #444;
+}
+
+.button-link {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.button-link:hover {
+  background-color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+footer a {
+  color: #ffd;
+  margin: 0 10px;
+}
+
+/* Floating Order Button */
+.order-now-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff5722;
+  color: white;
+  padding: 14px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 1000;
+}
+
+.order-now-btn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="Home.html">Home</a></li>
+      <li><a href="aboutpage.html">About</a></li>
+      <li><a href="Drink&wine.html">drinks and wine</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="Order.html">Order</a></li>
+    </ul>
+  </nav>  <h1>Welcome to Global Taste Restaurant</h1>
+  <p class="text-center">A world of flavor on one plate</p>  <!-- About Page Link --><a href="aboutpage.html" class="button-link">Learn More About Us</a>
+
+  <!-- Contact Button --><a href="contact.html" class="button-link">Contact Us</a>
+
+  <!-- Chinese Menu -->  <div class="menu-section">
+    <a href="chinese.html">
+      <img src="C.jpg" alt="Click to go to Chinese Menu">
+    </a>
+    <h4>Our Chinese Menu</h4>
+  </div>  <!-- Igbo Menu -->  <div class="menu-section">
+    <a href="igbo.html">
+      <img src="ii.jpg" alt="Click to go to Igbo Menu">
+    </a>
+    <h4>Our Igbo Menu</h4>
+  </div>  <!-- European Menu -->  <div class="menu-section">
+    <a href="European.html">
+      <img src="E.jpg" alt="Click to go to European Menu">
+    </a>
+    <h4>Our European Menu</h4>
+  </div>  <!-- Yoruba Menu -->  <div class="menu-section">
+    <a href="Yoruba.html">
+      <img src="y.jpg" alt="Click to go to Yoruba Menu">
+    </a>
+    <h4>Our Yoruba Menu</h4>
+  </div>  <!-- Floating Order Now Button --><a href="Order.html" class="order-now-btn">Order Now</a>
+
+  <!-- Footer -->  <footer>
+    <p><strong>Global Taste Restaurant</strong></p>
+    <p>123 Flavor Street, Food City, World</p>
+    <p>Open: Mon–Sat, 10:00 AM – 10:00 PM</p>
+    <p>
+      Follow us:
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+</body>
+</html>
