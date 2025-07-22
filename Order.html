@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order - Global Taste</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff4e6, #ffe0b2);
+      padding: 50px 20px;
+      color: #4e342e;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #d84315;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #7b4f35;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+
+    .order-form-container {
+      max-width: 600px;
+      background: #fffdf9;
+      margin: 0 auto;
+      padding: 35px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 0.7s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #5d4037;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      margin-bottom: 22px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #ff5722;
+      outline: none;
+    }
+
+    button {
+      background-color: #ff5722;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 18px;
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #e64a19;
+      transform: scale(1.02);
+    }
+
+    .success-message {
+      text-align: center;
+      color: green;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.1em;
+    }
+
+    footer {
+      text-align: center;
+      color: #8d6e63;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    .icon {
+      font-size: 1.3em;
+      margin-right: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .order-form-container {
+        padding: 25px 20px;
+      }
+      h2 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🧾 Place Your Order</h2>
+  <p class="subtitle">Delicious global meals, delivered with care</p>
+
+  <div class="order-form-container">
+    <form id="orderForm">
+      <label for="food"><span class="icon">🍽️</span>Select Menu</label>
+      <select id="food" required>
+        <option value="">-- Choose a menu --</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Igbo">Igbo</option>
+        <option value="European">European</option>
+        <option value="Yoruba">Yoruba</option>
+      </select>
+
+      <label for="quantity"><span class="icon">🔢</span>Quantity</label>
+      <input type="number" id="quantity" min="1" value="1" required />
+
+      <label for="name"><span class="icon">👤</span>Full Name</label>
+      <input type="text" id="name" required />
+
+      <label for="address"><span class="icon">📍</span>Delivery Address</label>
+      <textarea id="address" rows="3" required></textarea>
+
+      <button type="submit">✅ Submit Order</button>
+    </form>
+
+    <p class="success-message" id="successMsg"></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Global Taste Restaurant — Crafted with flavor 🌍
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const food = document.getElementById("food").value;
+      const quantity = document.getElementById("quantity").value;
+      const name = document.getElementById("name").value;
+      const address = document.getElementById("address").value;
+
+      // Replace this with Firebase or backend API logic
+      console.log("Order Placed:", { food, quantity, name, address });
+
+      document.getElementById("successMsg").textContent =
+        "✅ Thank you, " + name + "! Your order for " + quantity + " " + food + " meal(s) has been placed.";
+      this.reset();
+    });
+  </script>
+  <p class="success-message" id="successMsg"></p>
+</div> <!-- closing order-form-container -->
+
+<!-- 👇 Add Go Back Button Here -->
+<div style="text-align: center; margin-top: 30px;">
+  <a href="index.html" style="
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#555'" onmouseout="this.style.backgroundColor='#333'">
+    ⬅️ Back to Home Page
+  </a>
+</div>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Global Taste Restaurant — Crafted with flavor 🌍
+</footer>
+</body>
+</html>
